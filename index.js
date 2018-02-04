@@ -1,0 +1,73 @@
+const Discord = require('discord.js');
+const bot = new Discord.Client();
+
+
+
+
+bot.on('message', message => {
+  if (message.content === 'imi jungdogin geol malhae mwohae') {
+   // message.reply('pong');
+    message.channel.sendMessage('niga nal manjimyeon onmomi baneunghae');
+  }
+});
+
+bot.on('message', message => {
+  if (message.content === '') {
+   // message.reply('pong');
+    message.channel.sendMessage('');
+  }
+});
+
+bot.on('message', message => {
+  if (message.content === '') {
+   // message.reply('pong');
+    message.channel.sendMessage('');
+  }
+});
+
+bot.on('message', message => {
+  if (message.content === '') {
+   // message.reply('pong');
+    message.channel.sendMessage('');
+  }
+});
+
+bot.on('message', message => {
+  if (message.content === '') {
+   // message.reply('pong');
+    message.channel.sendMessage('');
+  }
+});
+
+bot.on('message', message => {
+  if (message.content === '') {
+   // message.reply('pong');
+    message.channel.sendMessage('');
+  }
+});
+
+bot.on("ready", () => {
+  bot.user.setPresence({game: {name:"HAVING A CHAT WITH HYUNGWON BOT"}})
+  console.log('I have jackoo: {SERVERNAME}')
+})
+
+bot.on('ready', ()=>{
+  console.log(`Logged in as ${bot.user.tag}!`);
+  voiceChannel = bot.guilds.find('name', 'DREAMENERG3T1CER').channels.find('name', 'SHOWNU');
+  voiceChannel.join().then(()=>{
+      console.log(`Connected to ${voiceChannel.name}!`);
+  });
+});
+
+// Create an event listener for new guild members
+bot.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find('name', 'general');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(`Welcome to the server, ${member}`);
+});
+
+
+bot.login('NDA3NDk4NTk1MjI3NDAyMjUw.DVCduQ.P78FU-qKhf37aTH4T4MuN0wXQys');
